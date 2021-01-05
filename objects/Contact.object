@@ -344,14 +344,6 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
-        <fullName>Blocked__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>Blocked?</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
         <fullName>Department</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
