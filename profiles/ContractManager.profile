@@ -3,21 +3,21 @@
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Account.IsValid__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Contact.Blocked__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>
-        <layout>Account-Account Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>Contact-Formato de contactos</layout>
     </layoutAssignments>
     <userLicense>Salesforce</userLicense>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ActivateContract</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ActivateOrder</name>
+    </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>ActivitiesAccess</name>
@@ -84,7 +84,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>EditBrandTemplates</name>
+        <name>EditActivatedOrders</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -92,19 +92,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>EditHtmlTemplates</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>EditOppLineItemUnitPrice</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditPublicDocuments</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditPublicTemplates</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -133,10 +121,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ExportReport</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ImportLeads</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
