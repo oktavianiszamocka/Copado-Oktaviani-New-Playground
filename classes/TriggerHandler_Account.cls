@@ -2,6 +2,9 @@ public with sharing class TriggerHandler_Account {
     private final static String COLD = 'Cold';
     public final static String PHONE_DEFAULT = '99999999';
 
+    public final static String US_Country = 'US';
+
+
     public void populateAccountIsValid(Map<Id, Account> newAccountMap, Map<Id, Account> oldAccountMap){
         for(Account acc : newAccountMap.values()){
             if(acc.Rating != oldAccountMap.get(acc.Id).Rating){
@@ -12,7 +15,11 @@ public with sharing class TriggerHandler_Account {
                 }
             }
         }
+    }
 
+    public Account setCountryPhone(Account acc){
+        acc.BillingCountry = US_Country;
+        return acc;
     }
 
     public Account setDefaultPhone(Account acc){
