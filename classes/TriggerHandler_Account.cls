@@ -9,10 +9,14 @@ public with sharing class TriggerHandler_Account {
                 } else{
                     acc.IsValid__c = true;
                 }
-
             }
         }
 
+    }
+
+    public Account setDefaultPhone(Account acc){
+        acc.Phone = '99999999';
+        return acc;
     }
 
 }
