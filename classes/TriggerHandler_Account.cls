@@ -1,5 +1,6 @@
 public with sharing class TriggerHandler_Account {
     private final static String COLD = 'Cold';
+    public final static String PHONE_DEFAULT = '99999999';
 
     public void populateAccountIsValid(Map<Id, Account> newAccountMap, Map<Id, Account> oldAccountMap){
         for(Account acc : newAccountMap.values()){
@@ -15,7 +16,7 @@ public with sharing class TriggerHandler_Account {
     }
 
     public Account setDefaultPhone(Account acc){
-        acc.Phone = '99999999';
+        acc.Phone = PHONE_DEFAULT;
         return acc;
     }
 
