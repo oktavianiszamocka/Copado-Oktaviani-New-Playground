@@ -2,6 +2,11 @@
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <custom>false</custom>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.External_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Account.IsValid__c</field>
         <readable>true</readable>
@@ -9,6 +14,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Blocked__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.External_Id__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>
