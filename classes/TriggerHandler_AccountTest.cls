@@ -38,4 +38,19 @@ public with sharing class TriggerHandler_AccountTest {
         System.assertEquals(false, updatedAcc.IsValid__c);
     }
 
+    @IsTest
+    static void shouldSetBillingCountry(){
+        //given
+        Account acc = [SELECT Name, BillingCountry from Account LIMIT 1];
+
+        //when
+        Test.startTest();
+        new TriggerHandler_Account()
+                .setCountryPhone(acc);
+        update acc;
+
+        //then
+        Account updatedAcc = [SELECT Name, BillingCountry from Account WHERE Id = :acc.Id LIMIT 1];
+        System.assertEquals(TriggerHandler_Account.US_Country, updatedAcc.BillingCountry);
+    }
 }
