@@ -6,6 +6,7 @@ public with sharing class TriggerHandler_Account {
 
 
     public void populateAccountIsValid(Map<Id, Account> newAccountMap, Map<Id, Account> oldAccountMap){
+        //test test 
         for(Account acc : newAccountMap.values()){
             if(acc.Rating != oldAccountMap.get(acc.Id).Rating){
                 if(acc.Rating == COLD){
