@@ -38,4 +38,19 @@ public with sharing class TriggerHandler_AccountTest {
         System.assertEquals(false, updatedAcc.IsValid__c);
     }
 
+    @IsTest
+    static void shouldSetDefaultPhone(){
+        //given
+        Account acc = [SELECT Name,  Phone from Account LIMIT 1];
+
+        //when
+        Test.startTest();
+        new TriggerHandler_Account()
+                .setDefaultPhone(acc);
+        update acc;
+
+        //then
+        Account updatedAcc = [SELECT Name, Phone from Account WHERE Id = :acc.Id LIMIT 1];
+        System.assertEquals(TriggerHandler_Account.PHONE_DEFAULT, updatedAcc.Phone);
+    }
 }
